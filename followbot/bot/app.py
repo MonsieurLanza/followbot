@@ -29,7 +29,7 @@ class App():
 
     def follow(self, account):
         try:
-            if account["locked"] or "#dnf" in account["note"].lower():
+            if account["locked"] or ["#dnf", #nobot] in account["note"].lower():
                 logging.info("Account %s is locked or has #dnf in their note" % account["acct"])
                 return
         except KeyError:
